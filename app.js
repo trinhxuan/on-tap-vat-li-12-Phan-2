@@ -354,11 +354,13 @@ if (typeof window.updateDashboard === 'function') window.updateDashboard();
 // 8. HÀM KIỂM TRA ĐÁP ÁN CỤC BỘ
 window.checkAnswers = function(quizId) {
     const contentArea = document.getElementById('contentArea');
+    
+    // SỬA LỖI "RÂU ÔNG NỌ CẮM CẰM BÀ KIA": Chỉ tìm câu hỏi trong chuyên đề hiện tại
     let quizData = null;
-    for (let topic in physicsData) {
-        let found = physicsData[topic].quizzes?.find(q => q.id === quizId);
-        if (found) { quizData = found; break; }
+    if (physicsData[currentTopic] && physicsData[currentTopic].quizzes) {
+        quizData = physicsData[currentTopic].quizzes.find(q => q.id === quizId);
     }
+    
     if (!quizData) return;
 
     quizData.statements.forEach(stmt => {
@@ -371,6 +373,8 @@ window.checkAnswers = function(quizId) {
 
             if (!selected) {
                 expDiv.innerHTML = `<span style="color: #fbbf24; font-weight: 500;">⚠️ Bạn chưa chọn đáp án cho ý này!</span>`;
+                // SỬA LỖI KHÔNG HIỆN KẾT QUẢ: Ép hiển thị đè lên CSS cũ
+                expDiv.style.display = 'block'; 
                 expDiv.classList.add('show');
             } else {
                 const isUserTrue = selected.value === 'true';
@@ -397,10 +401,15 @@ window.checkAnswers = function(quizId) {
                 }
                 
                 expDiv.innerHTML = `${statusText} <br> <strong style="color:#38bdf8;">💡 Giải thích:</strong> ${stmt.exp || "Chưa có lời giải chi tiết."}`;
+                // SỬA LỖI KHÔNG HIỆN KẾT QUẢ: Ép hiển thị đè lên CSS cũ
+                expDiv.style.display = 'block'; 
                 expDiv.classList.add('show');
             }
         }
     });
+
+    // Cập nhật lại công thức Toán học MathJax nếu có
+   
 
     if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
         MathJax.typesetPromise([contentArea]).catch((err) => console.log("MathJax Error: ", err));
