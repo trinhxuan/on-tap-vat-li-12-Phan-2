@@ -463,3 +463,70 @@ body {
 
 .mistake-box { background: rgba(239, 68, 68, 0.1); padding: 14px 16px; border-left: 4px solid #ef4444; margin-top: 20px; color: #fca5a5; font-weight: 500; border-radius: 8px; }
 .fix-box { background: rgba(34, 197, 94, 0.1); padding: 14px 16px; border-left: 4px solid #22c55e; margin-top: 8px; color: #86efac; font-weight: 500; border-radius: 8px; }
+/* =========================================
+   GIAO DIỆN BẢNG ĐIỀU KHIỂN HỌC TẬP
+========================================= */
+.dashboard-section { margin-bottom: 30px; }
+.dashboard-header h2 { font-size: 1.4rem; color: #ffffff; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; font-weight: 800;}
+.dashboard-header p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+.dashboard-grid { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr; /* Cột trái to hơn cột phải */
+    grid-gap: 16px; 
+}
+
+.dash-card { 
+    background: #1e293b; 
+    border-radius: 12px; 
+    padding: 20px; 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    border: 1px solid var(--border-card); 
+}
+.dash-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+.dash-icon { 
+    width: 50px; height: 50px; 
+    border-radius: 12px; 
+    display: flex; align-items: center; justify-content: center; 
+    flex-shrink: 0; 
+}
+.dash-info h3 { color: #f8fafc; font-size: 1.15rem; margin-bottom: 4px; font-weight: 700; }
+.dash-info p { color: var(--text-muted); font-size: 0.88rem; margin: 0; }
+
+/* Phối màu riêng cho từng thẻ */
+.card-resume { 
+    border-color: rgba(217, 119, 6, 0.4); 
+    background: rgba(15, 23, 42, 0.6); 
+}
+.card-resume .dash-icon { background: rgba(217, 119, 6, 0.2); color: #fbbf24; }
+
+.card-history { background: rgba(15, 23, 42, 0.6); }
+.card-history .dash-icon { background: rgba(16, 185, 129, 0.15); color: #34d399; }
+
+.card-mistakes { background: rgba(15, 23, 42, 0.6); }
+.card-mistakes .dash-icon { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+
+.dash-btn { 
+    margin-left: auto; 
+    background: var(--primary-color); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 8px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    transition: background 0.2s;
+}
+.dash-btn:hover { background: var(--primary-hover); }
+
+/* Responsive trên điện thoại */
+@media (max-width: 768px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .card-resume { flex-wrap: wrap; }
+    .dash-btn { margin-left: 0; width: 100%; margin-top: 10px; }
+}

@@ -48,14 +48,49 @@
                 <button class="tab-btn" onclick="switchTopic('khi', this)">Khí Lý Tưởng</button>
                 <button class="tab-btn" onclick="switchTopic('tu', this)">Từ Trường</button>
                 <button class="tab-btn" onclick="switchTopic('hatnhan', this)">Vật Lý Hạt Nhân</button>
+                <button class="tab-btn" style="color: #fbbf24;" onclick="switchTopic('cam-nang', this)">📘 Cẩm nang & Mẹo</button>
                 <button class="tab-btn" style="color: #f43f5e;" onclick="switchTopic('khac-phuc-loi', this)">🚨 Khắc phục lỗi sai</button>
             </nav>
         </div>
     </header>
 
     <main class="container" style="margin-top: 24px;">
+        <div id="learning-dashboard" class="dashboard-section">
+            <div class="dashboard-header">
+                <h2>🎓 Bảng Điều Khiển Học Tập</h2>
+                <p>Theo dõi tiến độ và tối ưu hóa kết quả ôn thi của bạn</p>
+            </div>
+            <div class="dashboard-grid">
+                
+                <div class="dash-card card-resume" id="resumeCard">
+                    <div class="dash-icon"><span style="font-size:1.5rem; margin-left: 4px;">▶</span></div>
+                    <div class="dash-info">
+                        <h3>Đang học dở...</h3>
+                        <p id="resumeText">Hệ thống đang tải dữ liệu...</p>
+                    </div>
+                    <button class="dash-btn" id="resumeBtn">Tiếp tục ngay</button>
+                </div>
+
+                <div class="dash-card card-history" onclick="window.showScoreHistory()">
+                    <div class="dash-icon"><span style="font-size:1.5rem">⏱</span></div>
+                    <div class="dash-info">
+                        <h3>Lịch sử làm bài</h3>
+                        <p>Xem lại điểm số các lần thi trước</p>
+                    </div>
+                </div>
+
+                <div class="dash-card card-mistakes" onclick="document.querySelectorAll('.tab-btn')[5].click()">
+                    <div class="dash-icon"><span style="font-size:1.5rem">⚠</span></div>
+                    <div class="dash-info">
+                        <h3>Ôn tập lỗi sai</h3>
+                        <p>Khắc phục điểm yếu để không sai lại</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <section id="contentArea" class="content-area">
-            </section>
+        </section>
     </main>
 
     <script src="data.js"></script>
