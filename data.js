@@ -1555,8 +1555,309 @@ const physicsData = {
                 { id: 'c', text: 'Khi hệ thống phanh điện từ hoạt động, một phần lớn động năng của xe tải được chuyển hóa thành nhiệt năng làm nóng đĩa phanh.', isTrue: true, exp: 'ĐÚNG. Dòng Foucault chạy quẩn trong khối đĩa kim loại có điện trở sẽ tỏa nhiệt rất mạnh theo định luật Joule-Lenz.' },
                 { id: 'd', text: 'Ưu điểm của phanh điện từ so với phanh ma sát cơ học là nó không gây mài mòn đĩa phanh, rất phù hợp khi xe đổ đèo liên tục.', isTrue: true, exp: 'ĐÚNG. Lực hãm sinh ra hoàn toàn thông qua trường điện từ mà không có sự tiếp xúc cơ học nào, tránh được hiện tượng cháy má phanh khi ma sát quá nhiệt.' }
             ]
-        }
+        },
+		
+   {
+        "id": "q31",
+        "context": "Một thanh kim loại MN có chiều dài $l = 0,5\\text{ m}$ và điện trở $R = 0,2\\ \\Omega$ được đặt tựa trên hai thanh ray dẫn điện song song nằm ngang (điện trở của ray không đáng kể). Toàn bộ hệ thống nằm trong một từ trường đều có vectơ cảm ứng từ $\\vec{B}$ hướng thẳng đứng xuống dưới, độ lớn $B = 0,4\\text{ T}$. Người ta kéo thanh MN trượt đều với vận tốc $v = 2\\text{ m/s}$ dọc theo hai thanh ray.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Độ lớn suất điện động cảm ứng sinh ra trong thanh MN khi trượt là $0,4\\text{ V}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Suất điện động cảm ứng của thanh chuyển động: $e = B \\cdot v \\cdot l \\cdot \\sin(90^\\circ) = 0,4 \\cdot 2 \\cdot 0,5 = 0,4\\text{ V}$."
+            },
+            {
+                "id": "b",
+                "text": "Lực từ (lực Ampere) do từ trường tác dụng lên dòng điện cảm ứng trong thanh MN có cùng hướng với vận tốc $\\vec{v}$.",
+                "isTrue": false,
+                "exp": "SAI. Theo định luật Lenz, dòng điện cảm ứng sinh ra lực từ có tác dụng chống lại nguyên nhân sinh ra nó (sự trượt). Do đó, lực từ phải hướng ngược chiều với vận tốc $\\vec{v}$ để cản trở chuyển động."
+            },
+            {
+                "id": "c",
+                "text": "Cường độ dòng điện cảm ứng chạy qua thanh MN là $2\\text{ A}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Theo định luật Ohm cho toàn mạch: $I = \\frac{e}{R} = \\frac{0,4}{0,2} = 2\\text{ A}$."
+            },
+            {
+                "id": "d",
+                "text": "Công suất cơ học mà người kéo cần cung cấp để duy trì vận tốc đều cho thanh MN (bỏ qua ma sát) đúng bằng công suất tỏa nhiệt Joule-Lenz trên thanh.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Lực kéo $F_k = F_{\\text{từ}} = B \\cdot I \\cdot l = 0,4 \\cdot 2 \\cdot 0,5 = 0,4\\text{ N}$. Công suất cơ học $P_{\\text{cơ}} = F_k \\cdot v = 0,4 \\cdot 2 = 0,8\\text{ W}$. Công suất tỏa nhiệt $P_{\\text{nhiệt}} = I^2 \\cdot R = 2^2 \\cdot 0,2 = 0,8\\text{ W}$. Năng lượng được bảo toàn."
+            }
         ]
+    },
+    {
+        "id": "q32",
+        "context": "Một thanh nam châm thẳng được thả rơi tự do theo phương thẳng đứng từ một độ cao nhất định. Nam châm rơi xuyên qua tâm của một vòng dây dẫn bằng đồng đặt nằm ngang, cố định trên giá đỡ. Bỏ qua sức cản của không khí.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Gia tốc rơi của nam châm trong toàn bộ quá trình luôn bằng gia tốc rơi tự do $g$.",
+                "isTrue": false,
+                "exp": "SAI. Khi nam châm tiến lại gần hoặc đi ra xa, dòng điện cảm ứng trong vòng dây sinh ra lực từ chống lại chuyển động của nam châm (đẩy khi đến gần, hút khi ra xa), làm gia tốc của nó luôn nhỏ hơn $g$."
+            },
+            {
+                "id": "b",
+                "text": "Dòng điện cảm ứng chạy trong vòng dây đổi chiều đúng một lần trong suốt quá trình nam châm rơi xuyên qua.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Khi nam châm đi vào, từ thông qua vòng dây tăng. Khi nam châm đi ra, từ thông giảm. Do sự đảo ngược trạng thái biến thiên này, dòng điện cảm ứng bắt buộc phải đổi chiều theo định luật Lenz."
+            },
+            {
+                "id": "c",
+                "text": "Nếu thay vòng dây đồng kín bằng một vòng dây đồng bị xẻ một rãnh nhỏ (hở mạch), nam châm sẽ rơi với gia tốc đúng bằng $g$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Vòng dây hở không thể hình thành dòng điện cảm ứng. Do không có dòng điện, không có từ trường cảm ứng chống lại, nam châm rơi hoàn toàn dưới tác dụng của trọng lực (gia tốc $g$)."
+            },
+            {
+                "id": "d",
+                "text": "Động năng của nam châm khi chạm đất trong trường hợp rơi qua vòng dây kín lớn hơn so với trường hợp rơi tự do không có vòng dây.",
+                "isTrue": false,
+                "exp": "SAI. Một phần cơ năng của nam châm đã chuyển hóa thành điện năng (và sau đó là nhiệt năng tỏa ra trên vòng dây đồng). Do đó, động năng cuối cùng của nam châm phải nhỏ hơn so với khi rơi tự do."
+            }
+        ]
+    },
+    {
+        "id": "q33",
+        "context": "Một đoạn dây dẫn cứng được uốn thành một góc vuông MNP (tại N), có chiều dài hai cạnh lần lượt là $MN = 30\\text{ cm}$ và $NP = 40\\text{ cm}$. Đoạn dây mang dòng điện không đổi $I = 5\\text{ A}$ và được đặt trong một từ trường đều $B = 0,2\\text{ T}$ sao cho mặt phẳng chứa hai đoạn dây vuông góc với các đường sức từ.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Độ lớn lực từ tác dụng lên riêng đoạn dây MN là $0,3\\text{ N}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $F_{MN} = B \\cdot I \\cdot L_{MN} \\cdot \\sin(90^\\circ) = 0,2 \\cdot 5 \\cdot 0,3 = 0,3\\text{ N}$."
+            },
+            {
+                "id": "b",
+                "text": "Vectơ lực từ tác dụng lên đoạn MN và vectơ lực từ tác dụng lên đoạn NP có cùng phương nhưng ngược chiều nhau.",
+                "isTrue": false,
+                "exp": "SAI. Hai đoạn dây vuông góc nhau, dòng điện vuông góc nhau. Theo quy tắc bàn tay trái, hai vectơ lực từ tác dụng lên chúng cũng vuông góc với nhau trên mặt phẳng khung, không phải ngược chiều."
+            },
+            {
+                "id": "c",
+                "text": "Độ lớn lực từ tổng hợp tác dụng lên toàn bộ đoạn dây gấp khúc MNP là $0,7\\text{ N}$.",
+                "isTrue": false,
+                "exp": "SAI. Lực từ tổng hợp bằng lực từ tác dụng lên đoạn dây thẳng nối hai điểm đầu cuối MP. Chiều dài $MP = \\sqrt{30^2 + 40^2} = 50\\text{ cm} = 0,5\\text{ m}$. $F_{\\text{tổng}} = B \\cdot I \\cdot L_{MP} = 0,2 \\cdot 5 \\cdot 0,5 = 0,5\\text{ N}$."
+            },
+            {
+                "id": "d",
+                "text": "Nếu xoay toàn bộ hệ thống sao cho mặt phẳng chứa MNP song song với các đường sức từ, lực từ tổng hợp tác dụng lên dây sẽ bằng 0.",
+                "isTrue": false,
+                "exp": "SAI. Nếu mặt phẳng MNP song song $\\vec{B}$, tùy vào góc định hướng, có thể một đoạn song song ($F=0$) nhưng đoạn kia sẽ vuông góc $\\vec{B}$ ($F$ lớn nhất), nên lực từ tổng hợp nói chung khác 0."
+            }
+        ]
+    },
+    {
+        "id": "q34",
+        "context": "Trong một trạm biến áp, máy biến áp đóng vai trò thiết yếu để giảm hao phí khi truyền tải điện năng đi xa. Đặt vào cuộn sơ cấp ($N_1 = 1000$ vòng) một điện áp xoay chiều hiệu dụng $U_1 = 2\\text{ kV}$. Cuộn thứ cấp có $N_2$ vòng và nối với đường dây truyền tải có điện trở tổng cộng $R = 50\\ \\Omega$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Máy biến áp hoạt động dựa trên nguyên lí cảm ứng điện từ do từ thông biến thiên qua lõi thép.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đây là nguyên tắc vật lí cốt lõi của mọi máy biến áp."
+            },
+            {
+                "id": "b",
+                "text": "Để nâng điện áp truyền tải lên mức $20\\text{ kV}$ nhằm giảm hao phí, số vòng dây cuộn thứ cấp $N_2$ phải bằng $10000$ vòng.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Theo công thức máy biến áp lí tưởng: $\\frac{U_2}{U_1} = \\frac{N_2}{N_1}$. Suy ra $N_2 = N_1 \\cdot \\left(\\frac{U_2}{U_1}\\right) = 1000 \\cdot \\left(\\frac{20}{2}\\right) = 10000$ vòng."
+            },
+            {
+                "id": "c",
+                "text": "Khi sử dụng máy tăng áp này (từ $2\\text{ kV}$ lên $20\\text{ kV}$), công suất hao phí tỏa nhiệt trên đường dây $R$ sẽ giảm đi 10 lần so với khi truyền thẳng bằng điện áp $2\\text{ kV}$.",
+                "isTrue": false,
+                "exp": "SAI. Công suất hao phí tỉ lệ nghịch với bình phương điện áp $U$. Khi $U$ tăng lên 10 lần, công suất hao phí phải giảm đi 100 lần ($10^2 = 100$)."
+            },
+            {
+                "id": "d",
+                "text": "Tần số của dòng điện ở cuộn thứ cấp sẽ lớn hơn tần số ở cuộn sơ cấp để giúp điện năng truyền đi nhanh hơn.",
+                "isTrue": false,
+                "exp": "SAI. Máy biến áp là thiết bị biến đổi điện áp xoay chiều nhưng KHÔNG làm thay đổi tần số của dòng điện."
+            }
+        ]
+    },
+    {
+        "id": "q35",
+        "context": "Một khung dây phẳng có diện tích $S = 200\\text{ cm}^2$, gồm $N = 100$ vòng dây, quay đều đặn với tốc độ $3000$ vòng/phút quanh một trục nằm trong mặt phẳng khung. Khung được đặt trong một từ trường đều $B = 0,1\\text{ T}$ vuông góc với trục quay. Pha ban đầu chọn lúc mặt phẳng khung vuông góc với vectơ $\\vec{B}$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Tần số góc của khung dây quay là $50\\text{ rad/s}$.",
+                "isTrue": false,
+                "exp": "SAI. Tốc độ quay là $3000\\text{ vòng/phút} = 50\\text{ vòng/giây}$ ($f = 50\\text{ Hz}$). Tần số góc $\\omega = 2\\pi f = 100\\pi\\text{ rad/s}$."
+            },
+            {
+                "id": "b",
+                "text": "Từ thông cực đại gửi qua toàn bộ khung dây là $0,2\\text{ Wb}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Diện tích $S = 200\\text{ cm}^2 = 0,02\\text{ m}^2$. Từ thông cực đại $\\Phi_0 = N \\cdot B \\cdot S = 100 \\cdot 0,1 \\cdot 0,02 = 0,2\\text{ Wb}$."
+            },
+            {
+                "id": "c",
+                "text": "Biểu thức của suất điện động cảm ứng trong khung dây là $e = 20\\pi \\cdot \\sin(100\\pi t)\\text{ (V)}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Lúc $t=0$, pháp tuyến cùng hướng $\\vec{B}$ (từ thông cực đại). Biểu thức từ thông $\\Phi = 0,2 \\cdot \\cos(100\\pi t)$. Suất điện động $e = -\\Phi' = 0,2 \\cdot 100\\pi \\cdot \\sin(100\\pi t) = 20\\pi \\cdot \\sin(100\\pi t)\\text{ V}$."
+            },
+            {
+                "id": "d",
+                "text": "Suất điện động hiệu dụng do máy phát này tạo ra xấp xỉ bằng $62,8\\text{ V}$.",
+                "isTrue": false,
+                "exp": "SAI. Suất điện động cực đại $E_0 = 20\\pi$ (khoảng $62,8\\text{ V}$). Giá trị hiệu dụng phải là $E = \\frac{E_0}{\\sqrt{2}} = \\frac{20\\pi}{\\sqrt{2}} \\approx 44,4\\text{ V}$."
+            }
+        ]
+    },
+    {
+        "id": "q36",
+        "context": "Trong một thiết bị chọn lọc vận tốc, một chùm các hạt electron được bắn vào một vùng không gian có điện trường đều $\\vec{E}$ và từ trường đều $\\vec{B}$. Vectơ $\\vec{E}$ và vectơ $\\vec{B}$ vuông góc với nhau. Bỏ qua trọng lực.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Để electron có thể chuyển động thẳng đều qua vùng không gian này, lực điện và lực từ tác dụng lên electron phải cùng phương, ngược chiều và cùng độ lớn.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Chuyển động thẳng đều nghĩa là gia tốc bằng 0. Theo định luật I Newton, tổng hợp lực phải bằng 0, do đó lực điện và lực Lorentz phải cân bằng nhau."
+            },
+            {
+                "id": "b",
+                "text": "Vận tốc của các electron đi thẳng không bị lệch hướng được xác định bởi biểu thức $v = \\frac{E}{B}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Từ điều kiện cân bằng $F_{\\text{điện}} = F_{\\text{từ}} \\Rightarrow |q|E = |q|vB \\Rightarrow v = \\frac{E}{B}$. Chỉ những hạt có vận tốc này mới đi lọt qua khe hẹp."
+            },
+            {
+                "id": "c",
+                "text": "Nếu thay chùm electron bằng chùm proton (mang điện dương) bay vào với cùng vận tốc $v = \\frac{E}{B}$, chùm proton sẽ bị lệch hướng về phía bản cực âm của tụ điện.",
+                "isTrue": false,
+                "exp": "SAI. Lực điện đổi chiều, đồng thời lực Lorentz cũng đổi chiều (do điện tích $q$ đổi dấu). Kết quả là hai lực này vẫn ngược chiều và cân bằng nhau. Proton vẫn đi thẳng đều."
+            },
+            {
+                "id": "d",
+                "text": "If electron bay vào vùng này với vận tốc lớn hơn ($v > \\frac{E}{B}$), lực điện sẽ thắng lực từ và bẻ cong quỹ đạo hạt.",
+                "isTrue": false,
+                "exp": "SAI. Lực từ $F_{\\text{từ}} = |q|vB$ tỉ lệ thuận với vận tốc, trong khi lực điện $F_{\\text{điện}} = |q|E$ không đổi. Khi $v$ lớn, lực Lorentz sẽ lớn hơn lực điện, bẻ quỹ đạo lệch về phía hướng của lực từ."
+            }
+        ]
+    },
+    {
+        "id": "q37",
+        "context": "Hai dây dẫn thẳng dài đặt song song, cách nhau một khoảng $d = 10\\text{ cm}$ trong không khí. Dây 1 được giữ cố định. Dây 2 có khối lượng trên mỗi mét chiều dài là $\\frac{m}{l} = 0,05\\text{ kg/m}$, nằm lơ lửng ngay bên dưới dây 1. Lấy $g = 10\\text{ m/s}^2$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Để dây 2 lơ lửng được, dòng điện chạy trong hai dây phải cùng chiều với nhau.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Dây 2 nằm dưới chịu tác dụng của trọng lực hướng xuống. Để cân bằng, lực từ do dây 1 tác dụng lên dây 2 phải hướng lên (lực hút). Hai dòng điện thẳng song song hút nhau khi chúng chạy cùng chiều."
+            },
+            {
+                "id": "b",
+                "text": "Lực từ cần thiết tác dụng lên 1 mét chiều dài của dây 2 để nó lơ lửng là $0,5\\text{ N}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Lực từ phải cân bằng với trọng lượng $P$ trên 1 mét chiều dài: $\\frac{F}{l} = \\frac{m \\cdot g}{l} = 0,05 \\cdot 10 = 0,5\\text{ N/m}$."
+            },
+            {
+                "id": "c",
+                "text": "Nếu dòng điện trong dây 1 là $I_1 = 500\\text{ A}$, thì dòng điện trong dây 2 phải là $I_2 = 500\\text{ A}$ để duy trì trạng thái lơ lửng.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Áp dụng công thức $\\frac{F}{l} = 2 \\cdot 10^{-7} \\cdot \\frac{I_1 \\cdot I_2}{d} \\Rightarrow 0,5 = 2 \\cdot 10^{-7} \\cdot \\frac{500 \\cdot I_2}{0,1} \\Rightarrow I_2 = \\frac{0,5 \\cdot 0,1}{2 \\cdot 10^{-7} \\cdot 500} = 500\\text{ A}$."
+            },
+            {
+                "id": "d",
+                "text": "Hiện tượng tương tác từ này là nguyên nhân chính khiến các đường dây cáp điện cao thế đan chéo nhau bị đứt khi có mưa bão.",
+                "isTrue": false,
+                "exp": "SAI. Mưa bão gây đứt cáp chủ yếu do lực cơ học của sức gió. Lực tương tác từ trong truyền tải bình thường khá nhỏ do khoảng cách lớn, chỉ trở thành yếu tố phá hoại nghiêm trọng khi có dòng đoản mạch cực lớn."
+            }
+        ]
+    },
+    {
+        "id": "q38",
+        "context": "Một con lắc vật lí là một tấm kim loại đồng nguyên khối được treo trên một trục quay. Cho con lắc dao động tự do đi qua một khe hẹp có từ trường đều rất mạnh do một nam châm điện tạo ra.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Khi tấm đồng đi vào hoặc đi ra khỏi vùng từ trường, trong khối đồng xuất hiện các dòng điện kín gọi là dòng điện Foucault.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Do chuyển động cắt các đường sức từ, từ thông qua các diện tích bên trong khối kim loại biến thiên, sinh ra các dòng điện xoáy (Foucault)."
+            },
+            {
+                "id": "b",
+                "text": "Dòng điện Foucault sinh ra một lực từ luôn cùng chiều với chuyển động của con lắc, làm con lắc dao động với biên độ lớn hơn.",
+                "isTrue": false,
+                "exp": "SAI. Theo định luật Lenz, dòng điện cảm ứng sinh ra lực từ có tác dụng CHỐNG LẠI sự chuyển động (tạo lực cản). Con lắc sẽ bị hãm lại và dừng rất nhanh."
+            },
+            {
+                "id": "c",
+                "text": "Quá trình dừng lại nhanh chóng của con lắc là minh chứng cho sự chuyển hóa cơ năng thành nhiệt năng tỏa ra trên tấm đồng.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Lực hãm từ thực hiện công âm làm giảm cơ năng. Dòng Foucault chạy trong tấm đồng có điện trở sẽ tỏa nhiệt (Joule-Lenz), làm tấm đồng nóng lên."
+            },
+            {
+                "id": "d",
+                "text": "Nếu thay tấm đồng nguyên khối bằng một tấm đồng bị cắt thành hình chiếc lược (có nhiều khe hở dọc), con lắc sẽ dừng lại nhanh hơn do diện tích cản gió tăng lên.",
+                "isTrue": false,
+                "exp": "SAI. Cắt rãnh răng lược nhằm làm đứt gãy các đường đi của dòng Foucault, tăng điện trở mạch vòng, làm dòng Foucault yếu đi rất nhiều. Lực hãm từ sẽ nhỏ đi, do đó con lắc sẽ dao động lâu hơn mới dừng."
+            }
+        ]
+    },
+    {
+        "id": "q39",
+        "context": "Trong thí nghiệm kiểm chứng công thức định luật Faraday, học sinh sử dụng một cuộn dây có $N$ vòng nối với cảm biến dòng điện và máy tính. Nam châm được thả rơi xuyên qua cuộn dây. Phần mềm hiển thị đồ thị cường độ dòng điện cảm ứng theo thời gian.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Đỉnh âm và đỉnh dương của đồ thị dòng điện xuất hiện tương ứng với hai giai đoạn: nam châm tiến vào cuộn dây và nam châm đi ra khỏi cuộn dây.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Khi tiến vào, từ thông tăng, tạo dòng điện một chiều. Khi đi ra, từ thông giảm, tạo dòng điện ngược chiều. Điều này làm đồ thị có 2 đỉnh âm dương đối xứng."
+            },
+            {
+                "id": "b",
+                "text": "Độ cao của hai đỉnh dòng điện trên đồ thị luôn có giá trị tuyệt đối bằng nhau do cực Bắc và cực Nam của nam châm có cường độ từ trường như nhau.",
+                "isTrue": false,
+                "exp": "SAI. Khi rơi xuống, nam châm chuyển động nhanh dần đều. Giai đoạn đi ra khỏi cuộn dây, nam châm có vận tốc lớn hơn so với lúc đi vào. Tốc độ biến thiên từ thông nhanh hơn nên đỉnh dòng điện lúc ra sẽ CAO HƠN đỉnh lúc vào."
+            },
+            {
+                "id": "c",
+                "text": "Diện tích hình phẳng giới hạn bởi đường cong đồ thị và trục hoành trong giai đoạn tăng và giảm từ thông đặc trưng cho tổng điện lượng dịch chuyển qua mạch.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $i = \\frac{dq}{dt} \\Rightarrow q = \\int i \\, dt$. Diện tích dưới đồ thị $i-t$ chính là điện lượng."
+            },
+            {
+                "id": "d",
+                "text": "Nếu tăng số vòng dây $N$ lên gấp đôi nhưng thả từ cùng một độ cao, bề rộng của mỗi đỉnh trên đồ thị (thời gian xung) sẽ hẹp đi một nửa.",
+                "isTrue": false,
+                "exp": "SAI. Thời gian xung phụ thuộc vào vận tốc rơi của nam châm. Tăng số vòng dây $N$ làm tăng biên độ dòng điện nhưng không làm thay đổi tốc độ nam châm rơi qua ống, nên bề rộng đồ thị gần như không đổi."
+            }
+        ]
+    },
+    {
+        "id": "q40",
+        "context": "Hệ thống truyền tải điện của một nhà máy sử dụng máy phát điện xoay chiều một pha có công suất định mức $P = 500\\text{ kW}$. Điện áp truyền lên đường dây là $U = 10\\text{ kV}$. Điện trở tổng cộng của đường dây truyền tải là $R = 10\\ \\Omega$. Hệ số công suất $\\cos(\\varphi) = 1$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Cường độ dòng điện hiệu dụng truyền tải trên đường dây là $50\\text{ A}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $I = \\frac{P}{U \\cdot \\cos(\\varphi)} = \\frac{500000}{10000 \\cdot 1} = 50\\text{ A}$."
+            },
+            {
+                "id": "b",
+                "text": "Độ sụt áp (điện áp rơi) trên đường dây tải điện là $500\\text{ V}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Độ sụt áp $\\Delta U = I \\cdot R = 50 \\cdot 10 = 500\\text{ V}$."
+            },
+            {
+                "id": "c",
+                "text": "Hiệu suất truyền tải điện năng của hệ thống này đạt $95\\%$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Công suất hao phí $\\Delta P = I^2 \\cdot R = 50^2 \\cdot 10 = 25000\\text{ W} = 25\\text{ kW}$. Công suất có ích $P' = P - \\Delta P = 500 - 25 = 475\\text{ kW}$. Hiệu suất $H = \\frac{P'}{P} = \\frac{475}{500} = 0,95 = 95\\%$. overhead"
+            },
+            {
+                "id": "d",
+                "text": "Để nâng hiệu suất truyền tải lên mức $99\\%$, người ta có thể thay thế đường dây bằng vật liệu khác để giảm điện trở $R$ xuống còn $5\\ \\Omega$.",
+                "isTrue": false,
+                "exp": "SAI. Nếu $R = 5\\ \\Omega$, $\\Delta P = I^2 \\cdot R = 50^2 \\cdot 5 = 12500\\text{ W} = 12,5\\text{ kW}$. Hiệu suất khi đó $H = \\frac{500 - 12,5}{500} = 0,975$ (tức $97,5\\%$), vẫn không thể đạt mức $99\\%$. Cách duy nhất hiệu quả là phải tăng điện áp $U$ bằng máy biến áp."
+            }
+        ]
+    }
+]
     },
    hatnhan: {
         theory: `
@@ -2044,7 +2345,307 @@ const physicsData = {
                 { id: 'c', text: 'Vì chu kì bán rã là 8 ngày, nên sau đúng 1 tháng (32 ngày), toàn bộ lượng I-131 trong cơ thể bệnh nhân sẽ biến mất hoàn toàn (về 0).', isTrue: false, exp: 'SAI. Sau 32 ngày (4 chu kì bán rã), độ phóng xạ giảm xuống còn $\\frac{1}{2^4} = \\frac{1}{16}$ so với ban đầu. Nó tiệm cận 0 chứ không bao giờ biến mất hoàn toàn trong thời gian hữu hạn.' },
                 { id: 'd', text: 'Các hạt $\\beta^-$ phát ra di chuyển được quãng đường rất ngắn trong mô (vài mm) và phá hủy các tế bào bệnh cục bộ mà không làm tổn thương các cơ quan xa.', isTrue: true, exp: 'ĐÚNG. Đây là cơ sở của xạ trị đích. Tia beta truyền toàn bộ năng lượng ion hóa mạnh mẽ trong phạm vi hẹp, tiêu diệt mô tuyến giáp bị bệnh mà không ảnh hưởng diện rộng.' }
             ]
-        }
+        },
+		{
+        "id": "q31",
+        "context": "Trong thí nghiệm tán xạ hạt $\\alpha$ của Rutherford, một chùm hạt $\\alpha$ ($q_\alpha = +2e$, $m_\alpha \\approx 4u$) mang động năng $E_k = 5\\text{ MeV}$ được bắn trực diện vào hạt nhân vàng ($Z = 79$, $A = 197$) đang đứng yên. Khi hạt $\\alpha$ tiến đến khoảng cách gần hạt nhân vàng nhất (bỏ qua kích thước của hai hạt), toàn bộ động năng của nó chuyển hóa thành thế năng tĩnh điện trong trường Coulomb của hạt nhân vàng. Lấy $e = 1,6 \\cdot 10^{-19}\\text{ C}$ và $\\frac{1}{4\\pi\\varepsilon_0} = 9 \\cdot 10^9\\text{ N}\\cdot\\text{m}^2/\\text{C}^2$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Thí nghiệm tán xạ hạt $\\alpha$ chứng minh rằng phần lớn thể tích của nguyên tử là không gian rỗng và điện tích dương tập trung tại hạt nhân.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Vì hầu hết các hạt $\\alpha$ truyền thẳng xuyên qua lá vàng mỏng, chỉ một số ít bị lệch hướng hoặc bật ngược trở lại khi tiến gần hạt nhân tích điện dương."
+            },
+            {
+                "id": "b",
+                "text": "Tại vị trí hạt $\\alpha$ ở gần hạt nhân vàng nhất, vận tốc tức thời của hạt $\\alpha$ đạt giá trị cực đại.",
+                "isTrue": false,
+                "exp": "SAI. Khi tiến đến gần nhất trong bài toán bắn trực diện, hạt $\\alpha$ bị lực đẩy Coulomb làm chậm dần rồi dừng lại hẳn trước khi bật ngược trở lại, do đó vận tốc tại điểm gần nhất bằng 0."
+            },
+            {
+                "id": "c",
+                "text": "Khoảng cách nhỏ nhất giữa hạt $\\alpha$ và tâm hạt nhân vàng trong thí nghiệm này xấp xỉ bằng $45,5 \\cdot 10^{-15}\\text{ m}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Áp dụng định luật bảo toàn năng lượng: $E_k = \\frac{1}{4\\pi\\varepsilon_0} \\cdot \\frac{q_\\alpha \\cdot q_{\\text{Au}}}{r_{\\text{min}}}$. Với $q_\\alpha = 2e$, $q_{\\text{Au}} = 79e$, và $E_k = 5 \\cdot 10^6 \\cdot 1,6 \\cdot 10^{-19}\\text{ J} = 8 \\cdot 10^{-13}\\text{ J}$. Suy ra $r_{\\text{min}} = 9 \\cdot 10^9 \\cdot \\frac{2 \\cdot 79 \\cdot (1,6 \\cdot 10^{-19})^2}{8 \\cdot 10^{-13}} \\approx 4,55 \\cdot 10^{-14}\\text{ m} = 45,5 \\cdot 10^{-15}\\text{ m}$."
+            },
+            {
+                "id": "d",
+                "text": "Kích thước thực tế của hạt nhân vàng phải lớn hơn kết quả khoảng cách nhỏ nhất $r_{\\text{min}}$ tính được ở trên.",
+                "isTrue": false,
+                "exp": "SAI. Vì hạt $\\alpha$ bị bật ngược lại hoàn toàn do lực đẩy tĩnh điện ngoài hạt nhân (chưa chạm vào bề mặt hạt nhân), nên bán kính thực tế của hạt nhân vàng phải nhỏ hơn khoảng cách $r_{\\text{min}}$ này."
+            }
         ]
+    },
+    {
+        "id": "q32",
+        "context": "Xét một phản ứng phân rã hạt nhân đơn giản: Hạt nhân Uranium $^{238}_{92}\\text{U}$ đứng yên, tự phát phân rã tạo thành hạt nhân con Thorium $^{234}_{90}\\text{Th}$ và giải phóng một hạt phóng xạ $X$. Cho biết khối lượng của các hạt nhân lần lượt là $m_{\\text{U}} = 238,0003u$, $m_{\\text{Th}} = 233,9942u$, $m_X = 4,0015u$. Lấy $1u = 931,5\\text{ MeV/c}^2$. Bỏ qua năng lượng của tia $\\gamma$ phát ra kèm theo.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Hạt $X$ được giải phóng trong phương trình phân rã trên là một hạt electron.",
+                "isTrue": false,
+                "exp": "SAI. Theo định luật bảo toàn số khối và số proton: $A_X = 238 - 234 = 4$ và $Z_X = 92 - 90 = 2$. Do đó $X$ là hạt $\\alpha$ ($^{4}_{2}\\text{He}$), không phải electron."
+            },
+            {
+                "id": "b",
+                "text": "Hệ thức $E = mc^2$ của Einstein khẳng định rằng khi khối lượng nghỉ của hệ hạt nhân giảm đi, một lượng năng lượng tương ứng sẽ được giải phóng ra môi trường dưới dạng động năng của các hạt hoặc năng lượng photon.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đây là nội dung cốt lõi của mối liên hệ giữa khối lượng và năng lượng trong phản ứng hạt nhân tỏa năng lượng."
+            },
+            {
+                "id": "c",
+                "text": "Năng lượng tỏa ra từ một phản ứng phân rã Uranium-238 này xấp xỉ bằng $4,28\\text{ MeV}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Độ hụt khối của phản ứng: $\\Delta m = m_{\\text{U}} - (m_{\\text{Th}} + m_X) = 238,0003 - (233,9942 + 4,0015) = 0,0046u$. Năng lượng tỏa ra: $E = \\Delta m \\cdot 931,5 = 0,0046 \\cdot 931,5 \\approx 4,28\\text{ MeV}$."
+            },
+            {
+                "id": "d",
+                "text": "Do hạt nhân mẹ Ban đầu đứng yên, nên sau phản ứng, hạt Th-234 và hạt $X$ sẽ bay ra cùng phương, cùng chiều với nhau để bảo toàn động lượng.",
+                "isTrue": false,
+                "exp": "SAI. Theo định luật bảo toàn động lượng: $\\vec{p}_{\\text{mẹ}} = \\vec{0} \\Rightarrow \\vec{p}_{\\text{Th}} + \\vec{p}_X = \\vec{0} \\Rightarrow \\vec{p}_{\\text{Th}} = -\\vec{p}_X$. Hai hạt phải bay ra cùng phương nhưng ngược chiều nhau."
+            }
+        ]
+    },
+    {
+        "id": "q33",
+        "context": "Năng lượng liên kết và độ bền vững của hạt nhân luôn là tiêu chí quan trọng để đánh giá xu hướng phản ứng hạt nhân. Xét ba hạt nhân: Deuterium ($^{2}_{1}\\text{H}$), Helium ($^{4}_{2}\\text{He}$), và Uranium ($^{235}_{92}\\text{U}$). Cho biết khối lượng của proton là $m_p = 1,0073u$, của neutron là $m_n = 1,0087u$. Khối lượng của hạt nhân $^{4}_{2}\\text{He}$ là $m_{\\text{He}} = 4,0015u$. Năng lượng liên kết riêng của $^{2}_{1}\\text{H}$ là $1,11\\text{ MeV/nucleon}$ và của $^{235}_{92}\\text{U}$ là $7,59\\text{ MeV/nucleon}$. Lấy $1u = 931,5\\text{ MeV/c}^2$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Hạt nhân có năng lượng liên kết $E_{\\text{lk}}$ càng lớn thì chắc chắn hạt nhân đó càng bền vững.",
+                "isTrue": false,
+                "exp": "SAI. Độ bền vững của hạt nhân không phụ thuộc vào năng lượng liên kết tổng cộng mà phụ thuộc vào năng lượng liên kết riêng (năng lượng liên kết tính trên một nucleon)."
+            },
+            {
+                "id": "b",
+                "text": "Độ hụt khối của hạt nhân Helium $^{4}_{2}\\text{He}$ có giá trị bằng $0,0305u$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $\\Delta m = (2 \\cdot m_p + 2 \\cdot m_n) - m_{\\text{He}} = (2 \\cdot 1,0073 + 2 \\cdot 1,0087) - 4,0015 = 0,0305u$."
+            },
+            {
+                "id": "c",
+                "text": "Năng lượng liên kết riêng của hạt nhân Helium $^{4}_{2}\\text{He}$ xấp xỉ bằng $7,10\\text{ MeV/nucleon}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Năng lượng liên kết tổng cộng: $E_{\\text{lk}} = 0,0305 \\cdot 931,5 \\approx 28,41\\text{ MeV}$. Năng lượng liên kết riêng: $\\varepsilon = \\frac{28,41}{4} \\approx 7,10\\text{ MeV/nucleon}$."
+            },
+            {
+                "id": "d",
+                "text": "Sắp xếp theo thứ tự độ bền vững tăng dần của các hạt nhân là: $^{2}_{1}\\text{H} \\rightarrow ^{235}_{92}\\text{U} \\rightarrow ^{4}_{2}\\text{He}$.",
+                "isTrue": false,
+                "exp": "SAI. Năng lượng liên kết riêng của ba hạt lần lượt là: $\\varepsilon_{\\text{H}} = 1,11\\text{ MeV/nu}$, $\\varepsilon_{\\text{He}} = 7,10\\text{ MeV/nu}$, $\\varepsilon_{\\text{U}} = 7,59\\text{ MeV/nu}$. Thứ tự bền vững tăng dần phải là: $^{2}_{1}\\text{H} \\rightarrow ^{4}_{2}\\text{He} \\rightarrow ^{235}_{92}\\text{U}$."
+            }
+        ]
+    },
+    {
+        "id": "q34",
+        "context": "Sự phân hạch và sự tổng hợp hạt nhân (nhiệt hạch) là hai nguồn năng lượng hạt nhân to lớn được ứng dụng rộng rãi trong công nghiệp và nghiên cứu vũ trụ. Phản ứng (1) là sự hấp thụ một neutron chậm của $^{235}_{92}\\text{U}$ để phân rã thành $^{95}_{38}\\text{Sr}$, $^{138}_{54}\\text{Xe}$ và các neutron. Phản ứng (2) là sự kết hợp của hai hạt nhân Deuterium $^{2}_{1}\\text{H}$ tạo thành Helium $^{3}_{2}\\text{He}$ và một hạt $Y$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Số hạt neutron được giải phóng ra ở sản phẩm của phản ứng phân hạch (1) là 3 hạt.",
+                "isTrue": false,
+                "exp": "SAI. Phương trình phản ứng (1): $^{1}_{0}\\text{n} + ^{235}_{92}\\text{U} \\rightarrow ^{95}_{38}\\text{Sr} + ^{138}_{54}\\text{Xe} + k\\cdot^{1}_{0}\\text{n}$. Bảo toàn số khối: $1 + 235 = 95 + 138 + k \\Rightarrow k = 3$. Tuy nhiên, vế phải giải phóng $3$ hạt neutron, nhưng trừ đi $1$ hạt neutron kích thích ban đầu ở vế trái, số lượng neutron ròng sinh ra thêm phục vụ phản ứng dây chuyền là 2 hạt."
+            },
+            {
+                "id": "b",
+                "text": "Hạt $Y$ trong phản ứng tổng hợp hạt nhân (2) có bản chất là một neutron ($^{1}_{0}\\text{n}$).",
+                "isTrue": true,
+                "exp": "ĐÚNG. Phương trình phản ứng (2): $^{2}_{1}\\text{H} + ^{2}_{1}\\text{H} \\rightarrow ^{3}_{2}\\text{He} + ^{A}_Z\\text{Y}$. Bảo toàn số khối và điện tích ta có $A = 2 + 2 - 3 = 1$ và $Z = 1 + 1 - 2 = 0$. Vậy $Y$ là $^{1}_{0}\\text{n}$."
+            },
+            {
+                "id": "c",
+                "text": "Xét về mặt bảo vệ môi trường và công nghiệp năng lượng bền vững, phản ứng tổng hợp hạt nhân (2) ưu việt hơn phản ứng phân hạch (1) vì nguồn nguyên liệu dồi dào trong tự nhiên và ít tạo ra rác thải phóng xạ nguy hại.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đây là nội dung thảo luận quan trọng về vai trò công nghiệp hạt nhân trong đời sống. Phản ứng nhiệt hạch dùng nhiên liệu hydro từ nước biển và sản phẩm Helium không độc hại."
+            },
+            {
+                "id": "d",
+                "text": "Cơ chế của cả hai phản ứng trên đều là các phản ứng hạt nhân thu năng lượng vì cần cung cấp động năng ban đầu cho hạt neutron hoặc cần nhiệt độ cực cao để các hạt nhân kết hợp.",
+                "isTrue": false,
+                "exp": "SAI. Cả hai phản ứng phân hạch và nhiệt hạch đều là các phản ứng hạt nhân TỎA năng lượng cực lớn. Việc cung cấp năng lượng ban đầu (mồi) chỉ là điều kiện để vượt qua lực đẩy Coulomb hoặc kích thích hạt nhân mất ổn định."
+            }
+        ]
+    },
+    {
+        "id": "q35",
+        "context": "Đồng vị phóng xạ Iodine-131 ($^{131}_{53}\\text{I}$) được dùng phổ biến trong y học để điều trị bệnh ung thư tuyến giáp. Chu kì bán rã của $^{131}\\text{I}$ là $T = 8$ ngày đêm. Một mẫu dược chất phóng xạ ban đầu chứa Iodine-131 nguyên chất với độ phóng xạ được đo là $H_0 = 2,0 \\cdot 10^9\\text{ Bq}$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Bản chất tự phát và ngẫu nhiên của sự phân rã phóng xạ Iodine-131 có nghĩa là ta không thể dự đoán chính xác thời điểm phân rã của một hạt nhân Iodine cụ thể, nhưng có thể dự đoán quy luật giảm số lượng hạt nhân của một tập hợp lớn hạt nhân theo thời gian.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đây là định nghĩa và tính chất cơ bản của định luật phóng xạ (mang tính thống kê)."
+            },
+            {
+                "id": "b",
+                "text": "Hằng số phóng xạ $\\lambda$ của đồng vị Iodine-131 này có giá trị xấp xỉ bằng $1,0 \\cdot 10^{-6}\\text{ s}^{-1}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $\\lambda = \\frac{\\ln 2}{T} = \\frac{0,693}{8 \\cdot 24 \\cdot 3600} \\approx 1,002 \\cdot 10^{-6}\\text{ s}^{-1}$."
+            },
+            {
+                "id": "c",
+                "text": "Số lượng hạt phóng xạ Iodine-131 ban đầu ($N_0$) có trong mẫu dược chất này xấp xỉ bằng $2,0 \\cdot 10^{15}$ hạt.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Áp dụng công thức liên hệ $H_0 = \\lambda \\cdot N_0 \\Rightarrow N_0 = \\frac{H_0}{\\lambda} = \\frac{2,0 \\cdot 10^9}{1,002 \\cdot 10^{-6}} \\approx 2,0 \\cdot 10^{15}$ hạt."
+            },
+            {
+                "id": "d",
+                "text": "Sau thời gian 24 ngày đêm, độ phóng xạ của mẫu thuốc giảm đi chỉ còn bằng $0,5 \\cdot 10^9\\text{ Bq}$.",
+                "isTrue": false,
+                "exp": "SAI. Thời gian $t = 24$ ngày $= 3T$. Độ phóng xạ còn lại: $H = \\frac{H_0}{2^3} = \\frac{2,0 \\cdot 10^9}{8} = 0,25 \\cdot 10^9\\text{ Bq}$."
+            }
+        ]
+    },
+    {
+        "id": "q36",
+        "context": "Trong một phòng thí nghiệm vật lí hạt nhân, người ta theo dõi số hạt chưa phân rã ($N$) của một mẫu chất phóng xạ mới tìm được. Kết quả thực nghiệm được ghi lại và dựng thành đồ thị biểu diễn sự phụ thuộc của $\\ln(N)$ theo thời gian $t$ (đo bằng giờ) như hình vẽ bên dưới. Đường biểu diễn thu được là một đoạn thẳng có phương trình tổng quát: $\\ln(N) = -0,05t + 30$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Đồ thị thực nghiệm kiểm chứng dạng hàm mũ của định luật phóng xạ vì khi lấy logarithm tự nhiên hai vế của công thức $N = N_0 \\cdot e^{-\\lambda t}$, ta được mối liên hệ tuyến tính giữa $\\ln(N)$ và $t$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Từ $N = N_0 \\cdot e^{-\\lambda t} \\Rightarrow \\ln(N) = \\ln(N_0) - \\lambda t$. Đây là một đường thẳng có hệ số góc bằng $-\\lambda$."
+            },
+            {
+                "id": "b",
+                "text": "Hằng số phóng xạ $\\lambda$ của chất này là $0,05\\text{ giờ}^{-1}$ và chu kì bán rã của chất này xấp xỉ bằng $13,86$ giờ.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đối chiếu hệ số góc: $\\lambda = 0,05\\text{ h}^{-1}$. Chu kì bán rã: $T = \\frac{\\ln 2}{\\lambda} = \\frac{0,693}{0,05} = 13,86$ giờ."
+            },
+            {
+                "id": "c",
+                "text": "Số lượng hạt nhân phóng xạ ban đầu ($N_0$) tại thời điểm $t=0$ có giá trị bằng 30 hạt.",
+                "isTrue": false,
+                "exp": "SAI. Tại $t=0$, $\\ln(N_0) = 30 \\Rightarrow N_0 = e^{30} \\approx 1,07 \\cdot 10^{13}$ hạt, không phải 30 hạt."
+            },
+            {
+                "id": "d",
+                "text": "Tốc độ đếm xung (tốc độ số hạt đếm được) từ máy đo tại thời điểm $t = 10\\text{ giờ}$ sẽ giảm đi $e^{-0,5}$ lần so với tốc độ đếm xung ban đầu.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Tốc độ đếm xung tỉ lệ thuận với độ phóng xạ $H$. Mà $H = H_0 \\cdot e^{-\\lambda t}$. Với $t = 10\\text{ giờ}$ và $\\lambda = 0,05 \\Rightarrow H = H_0 \\cdot e^{-0,05 \\cdot 10} = H_0 \\cdot e^{-0,5}$. Tức là giảm đi đúng $e^{-0,5}$ lần."
+            }
+        ]
+    },
+    {
+        "id": "q37",
+        "context": "Cobalt-60 ($^{60}_{27}\\text{Co}$) là nguồn phóng xạ $\\beta^-$ và $\\gamma$ mạnh, được ứng dụng rộng rãi trong thiết bị chiếu xạ công nghiệp để tiệt trùng thực phẩm và kiểm tra không phá hủy (NDT). Khi một hạt nhân $^{60}_{27}\\text{Co}$ phân rã, nó phát ra một hạt $\\beta^-$ và biến đổi thành hạt nhân Nickel ($^{60}_{28}\\text{Ni}$ ) ở trạng thái kích thích, sau đó hạt nhân Nickel này lập tức hạ xuống mức năng lượng cơ bản và phát ra photon $\\gamma$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Phóng xạ $\\beta^-$ có bản chất là chùm các dòng hạt positron mang điện tích dương.",
+                "isTrue": false,
+                "exp": "SAI. Phóng xạ $\\beta^-$ là chùm các hạt electron ($^0_{-1}e$) mang điện tích âm. Phóng xạ $\\beta^+$ mới là chùm các positron."
+            },
+            {
+                "id": "b",
+                "text": "Tia $\\gamma$ phát ra trong quá trình trên có bản chất là sóng điện từ bước sóng cực ngắn, không làm thay đổi cấu trúc số khối ($A$) và số proton ($Z$) của hạt nhân Nickel.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Tia $\\gamma$ là các photon năng lượng cao phóng ra khi hạt nhân chuyển từ trạng thái kích thích về trạng thái bền, không làm thay đổi cấu tạo hạt nhân."
+            },
+            {
+                "id": "c",
+                "text": "Khi đi qua một điện trường đều nằm ngang giữa hai bản tụ điện, tia $\\beta^-$ sẽ bị lệch mạnh về phía bản tụ tích điện dương, còn tia $\\gamma$ truyền thẳng không bị lệch hướng.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Vì hạt $\\beta^-$ mang điện tích âm nên bị bản dương hút, còn tia $\\gamma$ không mang điện nên không chịu tác dụng của lực điện trường."
+            },
+            {
+                "id": "d",
+                "text": "Do khả năng đâm xuyên của tia $\\gamma$ cực lớn, các thùng hàng thực phẩm sau khi được chiếu xạ tiệt trùng bằng nguồn Cobalt-60 sẽ bị nhiễm phóng xạ nặng và không thể sử dụng làm thức ăn cho con người.",
+                "isTrue": false,
+                "exp": "SAI. Chiếu xạ thực phẩm bằng tia $\\gamma$ chỉ tiêu diệt vi khuẩn, nấm mốc chứ không hề làm thực phẩm bị nhiễm phóng xạ hay biến thành chất phóng xạ. Đây là phương pháp an toàn được quốc tế công nhận."
+            }
+        ]
+    },
+    {
+        "id": "q38",
+        "context": "An toàn bức xạ là nguyên tắc tối thượng khi làm việc với các nguồn phóng xạ trong công nghiệp và y tế. Người ta sử dụng ba phương pháp cơ bản để giảm liều lượng bức xạ nhận phải: Thời gian (giảm tối đa thời gian tiếp xúc), Khoảng cách (tăng khoảng cách tới nguồn), và Chắn bức xạ (sử dụng vật liệu hấp thụ phù hợp).",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Để che chắn hiệu quả dòng hạt phóng xạ $\\alpha$ phát ra từ một nguồn hở, ta bắt buộc phải sử dụng các tấm bia dày bằng bê tông cốt thép hoặc bằng chì.",
+                "isTrue": false,
+                "exp": "SAI. Hạt $\\alpha$ có kích thước lớn và ion hóa mạnh nên khả năng đâm xuyên rất kém. Một tờ giấy dày hoặc vài cm không khí đã có thể chặn hoàn toàn hạt $\\alpha$."
+            },
+            {
+                "id": "b",
+                "text": "Đối với một nguồn phóng xạ điểm phát tia $\\gamma$ đồng đều ra mọi hướng trong không gian, khi ta đứng lùi ra xa nguồn một khoảng tăng gấp 3 lần thì cường độ bức xạ (liều lượng nhận phải trên một đơn vị diện tích) sẽ giảm đi 9 lần.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Cường độ bức xạ từ nguồn điểm tỉ lệ nghịch với bình phương khoảng cách ($I \\propto \\frac{1}{r^2}$). Khi khoảng cách tăng 3 lần, cường độ giảm $3^2 = 9$ lần."
+            },
+            {
+                "id": "c",
+                "text": "Dấu hiệu nhận biết khu vực có nguy cơ phóng xạ hoặc chứa nguồn phóng xạ nguy hiểm là các biển báo có biểu tượng hình tam giác màu vàng với hình ba cánh quạt màu đen (hoặc đỏ cánh sen) đặc trưng.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Đây là biển báo tiêu chuẩn quốc tế (Trefoil loại tiêu chuẩn) dùng để cảnh báo nguy hiểm phóng xạ."
+            },
+            {
+                "id": "d",
+                "text": "Khi xảy ra sự cố tràn chất phóng xạ lỏng ở phòng thí nghiệm, nguyên tắc tuân thủ an toàn đầu tiên là dùng quạt công suất lớn thổi mạnh để chất phóng xạ bay hơi nhanh vào không khí nhằm làm giảm nồng độ tại chỗ.",
+                "isTrue": false,
+                "exp": "SAI. Làm như vậy sẽ khiến bụi và khí phóng xạ phát tán rộng ra môi trường, gây ô nhiễm diện rộng và nguy hiểm cho hệ hô hấp của con người. Quy trình chuẩn là phải cách ly khu vực, dùng vật liệu thấm hút thích hợp để thu gom."
+            }
+        ]
+    },
+    {
+        "id": "q39",
+        "context": "Trong một nghiên cứu địa chất cổ đại, các nhà khoa học sử dụng phương pháp định tuổi bằng đồng vị Carbon-14 ($^{14}_{6}\\text{C}$). Carbon-14 là đồng vị phóng xạ với chu kì bán rã $T = 5730$ năm. Trong khí quyển, tỉ lệ số hạt $^{14}\\text{C}$ so với đồng vị bền $^{12}\\text{C}$ luôn giữ không đổi ở mức $1,2 \\cdot 10^{-12}$ nhờ các tia vũ trụ liên tục tái tạo $^{14}\\text{C}$. Khi một sinh vật (thực vật, động vật) chết đi, quá trình trao đổi chất dừng lại, lượng $^{14}\\text{C}$ trong cơ thể giảm dần do phân rã phóng xạ. Một mẫu gỗ cổ lượm được từ hang động có khối lượng Carbon tổng cộng là $12\\text{ g}$ và đo được tốc độ phân rã hiện tại là 3,75 phân rã/giây (Bq). Biết số Avogadro $N_A = 6,02 \\cdot 10^{23}\\text{ mol}^{-1}$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Số hạt $^{14}\\text{C}$ có trong mẫu gỗ tại thời điểm cây vừa mới bị chặt (khi còn sống) xấp xỉ bằng $7,22 \\cdot 10^{11}$ hạt.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Số mol $^{12}\\text{C}$ trong $12\\text{ g}$ xấp xỉ $1\\text{ mol}$. Tổng số hạt C là $6,02 \\cdot 10^{23}$ hạt. Do tỉ lệ cố định khi sống, số hạt $^{14}\\text{C}$ ban đầu là: $N_0 = 6,02 \\cdot 10^{23} \\cdot 1,2 \\cdot 10^{-12} = 7,224 \\cdot 10^{11}$ hạt."
+            },
+            {
+                "id": "b",
+                "text": "Hằng số phóng xạ của Carbon-14 tính theo đơn vị giây xấp xỉ bằng $3,83 \\cdot 10^{-12}\\text{ s}^{-1}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. $\\lambda = \\frac{\\ln 2}{T} = \\frac{0,693}{5730 \\cdot 365 \\cdot 24 \\cdot 3600} \\approx 3,83 \\cdot 10^{-12}\\text{ s}^{-1}$."
+            },
+            {
+                "id": "c",
+                "text": "Độ phóng xạ ban đầu ($H_0$) của mẫu gỗ lúc sinh vật mới chết có giá trị bằng $15\\text{ Bq}$ (phân rã/giây).",
+                "isTrue": false,
+                "exp": "SAI. Độ phóng xạ ban đầu: $H_0 = \\lambda \\cdot N_0 = 3,83 \\cdot 10^{-12} \\cdot 7,224 \\cdot 10^{11} \\approx 2,77\\text{ Bq}$. Vì tốc độ phân rã đo được hiện tại là 3,75 Bq lớn hơn cả $H_0$, điều này vô lí về mặt vật lí (hoặc mẫu chứa tạp chất phóng xạ khác)."
+            },
+            {
+                "id": "d",
+                "text": "Nếu tốc độ phân rã đo được thực tế của mẫu gỗ cổ nhỏ bằng một nửa so với mẫu gỗ tươi cùng khối lượng tương đương hiện nay, thì tuổi của mẫu gỗ cổ đó là 5730 năm.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Khi độ phóng xạ giảm đi một nửa ($H = \\frac{H_0}{2}$), thời gian trôi qua đúng bằng một chu kì bán rã, tức là 5730 năm."
+            }
+        ]
+    },
+    {
+        "id": "q40",
+        "context": "Xét một lò phản ứng hạt nhân công suất phát điện $P_{\\text{điện}} = 600\\text{ MW}$ sử dụng nhiên liệu Uranium-235 ($^{235}_{92}\\text{U}$). Biết hiệu suất chuyển hóa từ nhiệt năng sang điện năng của nhà máy đạt $H = 33\\%$. Trung bình mỗi phân hạch của hạt nhân $^{235}\\text{U}$ giải phóng một năng lượng định mức $E = 200\\text{ MeV}$. Lấy $e = 1,6 \\cdot 10^{-19}\\text{ C}$, số Avogadro $N_A = 6,02 \\cdot 10^{23}\\text{ mol}^{-1}$ và khối lượng mol của $^{235}\\text{U}$ là $235\\text{ g/mol}$.",
+        "statements": [
+            {
+                "id": "a",
+                "text": "Tổng công suất nhiệt (năng lượng phân hạch tỏa ra trong một giây) cần thiết để duy trì hoạt động ổn định của nhà máy xấp xỉ bằng $1818\\text{ MW}$.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Công suất nhiệt tổng cộng: $P_{\\text{nhiệt}} = \\frac{P_{\\text{điện}}}{H} = \\frac{600\\text{ MW}}{0,33} \\approx 1818,18\\text{ MW}$."
+            },
+            {
+                "id": "b",
+                "text": "Số phân hạch diễn ra bên trong tâm lò trong mỗi giây phải đạt xấp xỉ $5,68 \\cdot 10^{19}$ phân hạch.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Năng lượng một phân hạch: $E = 200 \\cdot 10^6 \\cdot 1,6 \\cdot 10^{-19}\\text{ J} = 3,2 \\cdot 10^{-11}\\text{ J}$. Số phân hạch trong 1 giây: $n = \\frac{P_{\\text{nhiệt}}}{E} = \\frac{1818,18 \\cdot 10^6}{3,2 \\cdot 10^{-11}} \\approx 5,68 \\cdot 10^{19}$ phân hạch/giây."
+            },
+            {
+                "id": "c",
+                "text": "Khối lượng Uranium-235 tinh khiết mà lò phản ứng tiêu thụ hoàn toàn trong một ngày đêm (24 giờ) nặng khoảng $2,2\\text{ kg}$.",
+                "isTrue": false,
+                "exp": "SAI. Số phân hạch trong 1 ngày (86400 s): $N = n \\cdot 86400 \\approx 4,91 \\cdot 10^{24}$ hạt. Khối lượng U-235 tiêu thụ: $m = \\frac{N}{N_A} \\cdot M = \\frac{4,91 \\cdot 10^{24}}{6,02 \\cdot 10^{23}} \\cdot 235 \\approx 1916\\text{ g} \\approx 1,92\\text{ kg}$, không phải $2,2\\text{ kg}$."
+            },
+            {
+                "id": "d",
+                "text": "Nếu toàn bộ lượng năng lượng phân hạch sinh ra trong một ngày của lò phản ứng trên được thay thế bằng việc đốt than đá (nhiệt lượng tỏa ra khi đốt $1\\text{ kg}$ than là $3,0 \\cdot 10^7\\text{ J}$), khối lượng than đá cần dùng sẽ lớn hơn $5000$ tấn.",
+                "isTrue": true,
+                "exp": "ĐÚNG. Tổng năng lượng nhiệt lò tỏa ra trong 1 ngày: $Q = P_{\\text{nhiệt}} \\cdot 86400 = 1818,18 \\cdot 10^6 \\cdot 86400 \\approx 1,57 \\cdot 10^{14}\\text{ J}$. Khối lượng than cần: $m_{\\text{than}} = \\frac{1,57 \\cdot 10^{14}}{3,0 \\cdot 10^7} \\approx 5,23 \\cdot 10^6\\text{ kg} = 5230\\text{ tấn}$ (lớn hơn 5000 tấn). Con số này cho thấy tính ưu việt về mật độ năng lượng của ngành công nghiệp hạt nhân."
+            }
+        ]
+    }
+]
     }
 };
